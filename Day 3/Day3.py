@@ -40,7 +40,8 @@ def part_one():
 
 
 def  part_two():
-    f = open("Day3InputPart2.txt", "r")
+    # f = open("Day3InputPart2.txt", "r")
+    f = open("Day3Input.txt", "r")
     data = f.readlines()
     valid_input = "mul(), 1234567890do()don't()"
     total = 0
@@ -64,7 +65,7 @@ def  part_two():
                             num2 += command[j]
                         elif command[j] == ",":
                             is_diff = "x"
-                    print(f"num1: {num1}, num2: {num2}")
+                    # print(f"num1: {num1}, num2: {num2}")
                     total += mul(int(num1), int(num2))
                     command = ""
                 elif command[-1] == ")" and command[0:4] != "mul(":
